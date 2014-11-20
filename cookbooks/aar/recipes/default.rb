@@ -7,10 +7,6 @@ include_recipe "apache"
 include_recipe "mysql::server"
 include_recipe "unzip"
 
-
-
-
-
 # get the external file
 remote_file "#{Chef::Config[:file_cache_path]}/somefile.zip" do
   source 'https://github.com/colincam/Awesome-Appliance-Repair/archive/master.zip'
@@ -29,6 +25,11 @@ end
 
 execute "chown -R apache:apache AAR" do
   cwd "/var/www"
+end
+
+
+execute "pip install flask" do
+  creates "/usr/lib/python2.6/site-packages/flask"
 end
 
 

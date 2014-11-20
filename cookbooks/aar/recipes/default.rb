@@ -1,4 +1,5 @@
-
+package "mod_wsgi"
+package "MySQL-python"
 
 include_recipe "apache"
 include_recipe "mysql::server"

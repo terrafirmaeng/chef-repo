@@ -17,6 +17,7 @@
 #
 
 require 'chef/provider'
+require "rubygems"
 
 class Chef
   class Provider

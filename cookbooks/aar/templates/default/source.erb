@@ -1,9 +1,9 @@
-
+WSGISocketPrefix /var/run/wsgi
 Listen 9001
 
 <VirtualHost *:9001>
   ServerName /
-  WSGIDaemonProcess /AAR user=apache group=apache threads=5
+  WSGIDaemonProcess /AAR threads=5
   WSGIProcessGroup /AAR
   WSGIScriptAlias / /var/www/AAR/awesomeapp.wsgi
 
@@ -14,6 +14,5 @@ Listen 9001
   Allow from all
   </Directory>
 
-  CustomLog ${APACHE_LOG_DIR}/access.log combined
   ServerAdmin ops@example.com
 </VirtualHost>

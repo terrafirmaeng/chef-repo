@@ -1,9 +1,12 @@
 package "mod_wsgi"
 package "MySQL-python"
+package "epel-release"
+package "python-pip"
 
 include_recipe "apache"
 include_recipe "mysql::server"
 include_recipe "unzip"
+
 
 
 

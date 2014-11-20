@@ -23,7 +23,7 @@ end
 
 mysql_database_user 'aarapp' do
 	privileges [:select,:update,:insert,:create,:delete]
-	database_name 'foo'
+	database_name 'AARdb'
 	require_ssl true
 	action :grant
 end
